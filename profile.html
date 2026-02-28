@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+
+  <!--icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--tailwind library-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+
+<body>
+
+  <header>
+    <nav
+      class="hidden md:block fixed left-0 top-0 h-screen w-20 bg-white hover:w-60 transition-all duration-300 ease-in-out group shadow-lg z-100">
+      <div class="flex flex-col py-6 gap-1">
+        <!-- Logo -->
+        <div class="flex items-center px-4 mb-4">
+          <a href="./index.html" class="flex items-center">
+            <i class="fa-brands fa-instagram fa-xl w-8"></i>
+            <span
+              class="ml-3 font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Instagram</span>
+          </a>
+        </div>
+
+        <!-- Home -->
+        <a href="./index.html" class="navbar-a">
+          <i class="fa-regular fa-house fa-lg w-8"></i>
+          <span class="nav-span">Home</span>
+        </a>
+
+        <!-- Reels -->
+        <a href="#" class="navbar-a">
+          <i class="fa-regular fa-circle-play fa-lg w-8"></i>
+          <span class="nav-span">Reels</span>
+        </a>
+
+        <!-- Messages -->
+        <a href="#" class="navbar-a">
+          <i class="fa-regular fa-paper-plane fa-rotate-by fa-lg w-8" style="--fa-rotate-angle: 10deg"></i>
+          <span class="nav-span">Messages</span>
+        </a>
+
+        <!-- Search -->
+        <a href="#" class="navbar-a">
+          <i class="fa-solid fa-magnifying-glass fa-lg w-8"></i>
+          <span class="nav-span">Search</span>
+        </a>
+
+        <!-- Explore -->
+        <a href="#" class="navbar-a">
+          <i class="fa-regular fa-compass fa-lg w-8"></i>
+          <span class="nav-span">Explore</span>
+        </a>
+
+        <!-- Notifications -->
+        <a href="#" class="navbar-a">
+          <i class="fa-regular fa-heart fa-lg w-8"></i>
+          <span class="nav-span">Notifications</span>
+        </a>
+
+        <!-- Create -->
+        <a href="#" class="navbar-a">
+          <i class="fa-solid fa-plus fa-lg w-8"></i>
+          <span class="nav-span">Create</span>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="navbar-a">
+          <img src="./assets/images/public/profile.jpg" alt="" class="w-7 h-7 rounded-full" />
+          <span class="nav-span">Profile</span>
+        </a>
+
+        <!-- More -->
+        <a href="#" class="navbar-a mt-auto">
+          <i class="fa-solid fa-bars fa-lg w-8"></i>
+          <span class="nav-span">More</span>
+        </a>
+
+        <!-- Also from Meta -->
+        <a href="#" class="navbar-a">
+          <i class="fa-solid fa-cubes-stacked fa-lg w-8"></i>
+          <span class="nav-span">Also from Meta</span>
+        </a>
+      </div>
+    </nav>
+
+    <nav class="md:hidden bg-white fixed top-0 left-0 right-0 z-100 px-4 py-3 flex justify-between">
+      <a href="#" class="w-6">
+        <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt">
+            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-linecap="square"
+              stroke-miterlimit="10" stroke-width="2"></circle>
+            <path
+              d="m22,13.25v-2.5l-2.318-.966c-.167-.581-.395-1.135-.682-1.654l.954-2.318-1.768-1.768-2.318.954c-.518-.287-1.073-.515-1.654-.682l-.966-2.318h-2.5l-.966,2.318c-.581.167-1.135.395-1.654.682l-2.318-.954-1.768,1.768.954,2.318c-.287.518-.515,1.073-.682,1.654l-2.318.966v2.5l2.318.966c.167.581.395,1.135.682,1.654l-.954,2.318,1.768,1.768,2.318-.954c.518.287,1.073.515,1.654.682l.966,2.318h2.5l.966-2.318c.581-.167,1.135-.395,1.654-.682l2.318.954,1.768-1.768-.954-2.318c.287-.518.515-1.073.682-1.654l2.318-.966Z"
+              fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></path>
+          </g>
+        </svg>
+      </a>
+      <div class="logo flex gap-1 items-center">
+        <span>heba.labeeb</span>
+        <i class="fa-solid fa-angle-down fa-xs"></i>
+      </div>
+      <a href="#" class="w-6 thread relative">
+        <img src="./assets/images/public/threads.svg" alt="">
+      </a>
+    </nav>
+    <nav class="block md:hidden fixed bottom-0 left-0 w-screen border border-gray-200 px-3 py-2 bg-white z-100">
+      <div class="flex justify-evenly px-1">
+        <!-- Home -->
+        <a href="#" class="navbar-a-sm">
+          <i class="fa-regular fa-house w-8"></i>
+        </a>
+
+        <!-- Explore -->
+        <a href="#" class="navbar-a-sm">
+          <i class="fa-regular fa-compass w-8"></i>
+        </a>
+
+        <!-- Reels -->
+        <a href="#" class="navbar-a-sm">
+          <i class="fa-regular fa-circle-play w-8"></i>
+        </a>
+
+        <!-- Create -->
+        <a href="#" class="navbar-a-sm">
+          <i class="fa-solid fa-plus w-8"></i>
+        </a>
+
+        <!-- Messages -->
+        <a href="#" class="navbar-a-sm">
+          <i class="fa-regular fa-paper-plane fa-rotate-by w-8" style="--fa-rotate-angle: 10deg"></i>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="navbar-a-sm">
+          <img src="./assets/images/public/profile.jpg" alt="" class="w-5 h-5 rounded-full" />
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="mx-[11.5%] pt-7.5 px-5 max-sm:pt-4 max-md:mx-0 max-sm:pb-2 flex flex-col items-center">
+      <div class="w-full">
+        <!--header-->
+        <div class="px-[16%] max-md:px-0 max-md:pt-3">
+          <!--info-->
+          <div class="px-5 pt-7.5">
+            <div class="flex">
+              <!--image-->
+              <div class="mr-7">
+                <img src="./assets/images/public/profile.jpg" class="rounded-full" alt="">
+              </div>
+
+              <!--users info-->
+              <div>
+                <div class="flex flex-col items-start text-[14px] my-4 gap-y-1">
+                  <div class="flex gap-1 items-center">
+                    <div>
+                      <a href="#">
+                        <h2 class="text-[24px]">heba.labeeb</h2>
+                      </a>
+                    </div>
+                    <div class="p-2 hover:scale-110">
+                      <a href="#" class="w-6.5 ">
+                        <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                          <g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt">
+                            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-linecap="square"
+                              stroke-miterlimit="10" stroke-width="2"></circle>
+                            <path
+                              d="m22,13.25v-2.5l-2.318-.966c-.167-.581-.395-1.135-.682-1.654l.954-2.318-1.768-1.768-2.318.954c-.518-.287-1.073-.515-1.654-.682l-.966-2.318h-2.5l-.966,2.318c-.581.167-1.135.395-1.654.682l-2.318-.954-1.768,1.768.954,2.318c-.287.518-.515,1.073-.682,1.654l-2.318.966v2.5l2.318.966c.167.581.395,1.135.682,1.654l-.954,2.318,1.768,1.768,2.318-.954c.518.287,1.073.515,1.654.682l.966,2.318h2.5l.966-2.318c.581-.167,1.135-.395,1.654-.682l2.318.954,1.768-1.768-.954-2.318c.287-.518.515-1.073.682-1.654l2.318-.966Z"
+                              fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10"
+                              stroke-width="2"></path>
+                          </g>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="text-[14px]">
+                    <span>🦋 هِـــبـــة </span>
+                  </div>
+                  <div class="text-[14px] flex justify-start gap-4">
+                    <div>
+                      <span>
+                        <span class="font-semibold">0</span>
+                        posts
+                      </span>
+                    </div>
+                    <div>
+                      <a href="#">
+                        <span class="font-semibold">336</span>
+                        followers
+                      </a>
+                    </div>
+                    <div>
+                      <a href="#">
+                        <span class="font-semibold">1,047</span>
+                        following
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!--discription-->
+                <div class="cursor-pointer text-[14px]">
+                  <span>• 🇵🇸📍 <br /> • 𝙲.𝙴 || 𝙽𝙽𝚄 👩🏻‍💻 <br /> - </span>
+                </div>
+
+                <div class="flex items-center">
+                  <a href="#" class="flex gap-0.5 text-[14px]">
+                    <img src="./assets/images/public/threads.svg" class="w-5 h-5" alt="">
+                    <span>heba.labeeb</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--buttons-->
+          <div class="mt-3 w-full text-[14px]">
+            <div class="py-3">
+              <div class="flex items-center gap-x-2 grow text-center">
+                <a class="px-5 py-2 rounded-lg w-[50%] bg-[#f0f2f5] hover:bg-[#e7eaee] text-[#0c1014]">Edit
+                  profile</a>
+                <a class="px-5 py-2 rounded-lg w-[50%] bg-[#f0f2f5] hover:bg-[#e7eaee] text-[#0c1014]">View
+                  archive</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!--highlights section-->
+          <div class="my-8 max-sm:my-4">
+            <!--highlights-->
+            <div class="flex gap-2.5">
+              <!--highlight-->
+              <div class="py-2.5 px-3.75">
+                <div class="flex flex-col">
+                  <div
+                    class="rounded-full bg-[#f0f2f5] w-14 h-14 flex justify-center items-center cursor-pointer p-5 ring-3 ring-[#c7c7c7] ring-offset-3 ring-offset-white">
+                    <i class="fa-solid fa-plus fa-lg" style="color: #c7c7c7;"></i>
+                  </div>
+                  <div class="mt-3.75 text-center font-semibold text-[12px]">
+                    <span class="text-[#0c1014]">New</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- -->
+        <div class="px-[16%] max-sm:px-[6%]">
+          <!-- name of each tab group should be unique -->
+          <div
+            class="w-full tabs tabs-border grid grid-cols-3 [&_.tab-content]:border-0 [&_.tab-content]:border-t [&_.tab-content]:border-base-300">
+            <label class="tab justify-center [&:has(input:checked)]:text-[#D9CFC7]">
+              <input type="radio" name="my_tabs_4" />
+              <svg aria-label="Posts" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img"
+                viewBox="0 0 24 24" width="24">
+                <title>Posts</title>
+                <rect height="6" rx="1" ry="1" width="4.667" x="3" y="1"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="16.333" y="1"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="9.667" y="1"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="3" y="9"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="16.333" y="9"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="9.667" y="9"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="3" y="17"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="16.333" y="17"></rect>
+                <rect height="6" rx="1" ry="1" width="4.667" x="9.667" y="17"></rect>
+              </svg>
+            </label>
+            <div class="tab-content col-span-3 bg-base-100 border-base-300 p-6">
+              <div class="px-11 py-15 max-sm:px-5.5 max-sm:py-7.5 flex flex-col items-center text-center">
+                <div>
+                  <!-- Open the modal using ID.showModal() method -->
+                  <button class="btn bg-transparent border-black rounded-full w-15 h-15 p-2 overflow-visible"
+                    onclick="my_modal_2.showModal()"><img src="./assets/images/icons/camera.png" class="w-full"
+                      alt=""></button>
+                  <dialog id="my_modal_2" class="modal">
+                    <div class="modal-box">
+                      <div class="flex flex-col justify-between items-center gap-2 p-6">
+                        <div>
+                          <h3 class="text-lg font-bold">Create new post</h3>
+                        </div>
+                        <div>
+                          <svg aria-label="Icon to represent media such as images or videos" fill="currentColor"
+                            height="77" role="img" viewBox="0 0 97.6 77.3" width="96">
+                            <title>Icon to represent media such as images or videos</title>
+                            <path
+                              d="M16.3 24h.3c2.8-.2 4.9-2.6 4.8-5.4-.2-2.8-2.6-4.9-5.4-4.8s-4.9 2.6-4.8 5.4c.1 2.7 2.4 4.8 5.1 4.8zm-2.4-7.2c.5-.6 1.3-1 2.1-1h.2c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-.8.3-1.5.8-2.1z"
+                              fill="currentColor"></path>
+                            <path
+                              d="M84.7 18.4 58 16.9l-.2-3c-.3-5.7-5.2-10.1-11-9.8L12.9 6c-5.7.3-10.1 5.3-9.8 11L5 51v.8c.7 5.2 5.1 9.1 10.3 9.1h.6l21.7-1.2v.6c-.3 5.7 4 10.7 9.8 11l34 2h.6c5.5 0 10.1-4.3 10.4-9.8l2-34c.4-5.8-4-10.7-9.7-11.1zM7.2 10.8C8.7 9.1 10.8 8.1 13 8l34-1.9c4.6-.3 8.6 3.3 8.9 7.9l.2 2.8-5.3-.3c-5.7-.3-10.7 4-11 9.8l-.6 9.5-9.5 10.7c-.2.3-.6.4-1 .5-.4 0-.7-.1-1-.4l-7.8-7c-1.4-1.3-3.5-1.1-4.8.3L7 49 5.2 17c-.2-2.3.6-4.5 2-6.2zm8.7 48c-4.3.2-8.1-2.8-8.8-7.1l9.4-10.5c.2-.3.6-.4 1-.5.4 0 .7.1 1 .4l7.8 7c.7.6 1.6.9 2.5.9.9 0 1.7-.5 2.3-1.1l7.8-8.8-1.1 18.6-21.9 1.1zm76.5-29.5-2 34c-.3 4.6-4.3 8.2-8.9 7.9l-34-2c-4.6-.3-8.2-4.3-7.9-8.9l2-34c.3-4.4 3.9-7.9 8.4-7.9h.5l34 2c4.7.3 8.2 4.3 7.9 8.9z"
+                              fill="currentColor"></path>
+                            <path
+                              d="M78.2 41.6 61.3 30.5c-2.1-1.4-4.9-.8-6.2 1.3-.4.7-.7 1.4-.7 2.2l-1.2 20.1c-.1 2.5 1.7 4.6 4.2 4.8h.3c.7 0 1.4-.2 2-.5l18-9c2.2-1.1 3.1-3.8 2-6-.4-.7-.9-1.3-1.5-1.8zm-1.4 6-18 9c-.4.2-.8.3-1.3.3-.4 0-.9-.2-1.2-.4-.7-.5-1.2-1.3-1.1-2.2l1.2-20.1c.1-.9.6-1.7 1.4-2.1.8-.4 1.7-.3 2.5.1L77 43.3c1.2.8 1.5 2.3.7 3.4-.2.4-.5.7-.9.9z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
+                        <div mt-4>
+                          <h3 class="text-md font-normal">Drag photos and videos here</h3>
+                        </div>
+                        <div class="mt-6">
+                          <button
+                            class="cursor-pointer bg-[#4a5df9] hover:bg-[#4150f7] rounded-lg px-4 py-1.75 text-white text-[14px]">Select
+                            from computer</button>
+                        </div>
+                      </div>
+                    </div>
+                    <form method="dialog" class="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog>
+                </div>
+
+                <div class="my-6">
+                  <h1>Share Photos</h1>
+                </div>
+
+                <div class="mb-6">
+                  <span>When you share photos, they will appear on your profile.</span>
+                </div>
+
+                <div>
+                  <!-- Open the modal using ID.showModal() method -->
+                  <a class=" text-[12px] font-bold bg-white border-none text-[#85a1ff] cursor-pointer"
+                    onclick="my_modal_3.showModal()">Share your first photo</a>
+                  <dialog id="my_modal_3" class="modal">
+                    <div class="modal-box">
+                      <div class="flex flex-col justify-between items-center gap-2 p-6">
+                        <div>
+                          <h3 class="text-lg font-bold">Create new post</h3>
+                        </div>
+                        <div>
+                          <svg aria-label="Icon to represent media such as images or videos" fill="currentColor"
+                            height="77" role="img" viewBox="0 0 97.6 77.3" width="96">
+                            <title>Icon to represent media such as images or videos</title>
+                            <path
+                              d="M16.3 24h.3c2.8-.2 4.9-2.6 4.8-5.4-.2-2.8-2.6-4.9-5.4-4.8s-4.9 2.6-4.8 5.4c.1 2.7 2.4 4.8 5.1 4.8zm-2.4-7.2c.5-.6 1.3-1 2.1-1h.2c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-.8.3-1.5.8-2.1z"
+                              fill="currentColor"></path>
+                            <path
+                              d="M84.7 18.4 58 16.9l-.2-3c-.3-5.7-5.2-10.1-11-9.8L12.9 6c-5.7.3-10.1 5.3-9.8 11L5 51v.8c.7 5.2 5.1 9.1 10.3 9.1h.6l21.7-1.2v.6c-.3 5.7 4 10.7 9.8 11l34 2h.6c5.5 0 10.1-4.3 10.4-9.8l2-34c.4-5.8-4-10.7-9.7-11.1zM7.2 10.8C8.7 9.1 10.8 8.1 13 8l34-1.9c4.6-.3 8.6 3.3 8.9 7.9l.2 2.8-5.3-.3c-5.7-.3-10.7 4-11 9.8l-.6 9.5-9.5 10.7c-.2.3-.6.4-1 .5-.4 0-.7-.1-1-.4l-7.8-7c-1.4-1.3-3.5-1.1-4.8.3L7 49 5.2 17c-.2-2.3.6-4.5 2-6.2zm8.7 48c-4.3.2-8.1-2.8-8.8-7.1l9.4-10.5c.2-.3.6-.4 1-.5.4 0 .7.1 1 .4l7.8 7c.7.6 1.6.9 2.5.9.9 0 1.7-.5 2.3-1.1l7.8-8.8-1.1 18.6-21.9 1.1zm76.5-29.5-2 34c-.3 4.6-4.3 8.2-8.9 7.9l-34-2c-4.6-.3-8.2-4.3-7.9-8.9l2-34c.3-4.4 3.9-7.9 8.4-7.9h.5l34 2c4.7.3 8.2 4.3 7.9 8.9z"
+                              fill="currentColor"></path>
+                            <path
+                              d="M78.2 41.6 61.3 30.5c-2.1-1.4-4.9-.8-6.2 1.3-.4.7-.7 1.4-.7 2.2l-1.2 20.1c-.1 2.5 1.7 4.6 4.2 4.8h.3c.7 0 1.4-.2 2-.5l18-9c2.2-1.1 3.1-3.8 2-6-.4-.7-.9-1.3-1.5-1.8zm-1.4 6-18 9c-.4.2-.8.3-1.3.3-.4 0-.9-.2-1.2-.4-.7-.5-1.2-1.3-1.1-2.2l1.2-20.1c.1-.9.6-1.7 1.4-2.1.8-.4 1.7-.3 2.5.1L77 43.3c1.2.8 1.5 2.3.7 3.4-.2.4-.5.7-.9.9z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </div>
+                        <div mt-4>
+                          <h3 class="text-md font-normal">Drag photos and videos here</h3>
+                        </div>
+                        <div class="mt-6">
+                          <button
+                            class="cursor-pointer bg-[#4a5df9] hover:bg-[#4150f7] rounded-lg px-4 py-1.75 text-white text-[14px]">Select
+                            from computer</button>
+                        </div>
+                      </div>
+                    </div>
+                    <form method="dialog" class="modal-backdrop">
+                      <button>close</button>
+                    </form>
+                  </dialog>
+                </div>
+
+              </div>
+            </div>
+
+            <label class="tab justify-center [&:has(input:checked)]:text-[#D9CFC7]">
+              <input type="radio" name="my_tabs_4" checked="checked" />
+              <svg aria-label="Saved" class="text-[#1b171850]" fill="currentColor" height="24" role="img"
+                viewBox="0 0 24 24" width="24">
+                <title>Saved</title>
+                <polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon>
+              </svg>
+
+            </label>
+            <div class="tab-content col-span-3 bg-base-100 border-base-300">
+              <div class="flex flex-col">
+                <div class="flex items-center">
+                  <div class="grow w-[65%]">
+                    <div class="mt-8 mb-4 text-[12px] text-[#6a717a]">
+                      <span>Only you can see what you've saved</span>
+                    </div>
+                  </div>
+  
+                  <div>
+                    <!-- You can open the modal using ID.showModal() method -->
+                    <button class="text-[#4a5df9] text-[12px] mt-8 mb-4 font-semibold" onclick="my_modal_4.showModal()">+ New Collection</button>
+                    <dialog id="my_modal_4" class="modal">
+                      <div class="modal-box">
+                        <form method="dialog">
+                          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                        </form>
+                        <h3 class="text-lg font-bold mb-2">New collection</h3>
+                        <div class="w-full flex gap-2">
+                          <input type="text" class="px-3 py-1 w-[60%] bg-[#f3f5f7] border border-[#dbdfe4] grow rounded-lg focus:outline-[#4a5df9]" placeholder="Collection name"> 
+                          <button class="px-2 py-1 bg- text-[14px] bg-[#4a5df9] hover:bg-[#4150f7] text-white rounded-lg">Next</button>
+                        </div>
+                      </div>
+                    </dialog>
+                  </div>
+  
+                </div>
+                <div class="flex justify-center ml-px">
+                  <div class="skeleton h-50 w-50"></div>
+                </div>
+              </div>
+            </div>
+
+            <label class="tab justify-center [&:has(input:checked)]:text-[#D9CFC7]">
+              <input type="radio" name="my_tabs_4" />
+              <svg aria-label="Tagged" class="x1lliihq x1n2onr6 x1cp0k07" fill="currentColor" height="24" role="img"
+                viewBox="0 0 24 24" width="24">
+                <title>Tagged</title>
+                <path
+                  d="M21 7.48a2 2 0 0 0-2-2h-3.046a2.002 2.002 0 0 1-1.506-.683l-1.695-1.939a1 1 0 0 0-1.506 0L9.552 4.797c-.38.434-.93.682-1.506.682H5a2 2 0 0 0-2 2V19l.01.206A2 2 0 0 0 5 21h14a2 2 0 0 0 2-2V7.48ZM23 19a4 4 0 0 1-4 4H5a4 4 0 0 1-3.995-3.794L1 19V7.48a4 4 0 0 1 4-4h3.046l1.696-1.94a3 3 0 0 1 4.516 0l1.696 1.94H19a4 4 0 0 1 4 4V19Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M14.5 10.419a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Zm2 0a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM12 16.003c3.511 0 6.555 1.99 8.13 4.906a1 1 0 0 1-1.76.95c-1.248-2.31-3.64-3.857-6.37-3.857S6.878 19.55 5.63 21.86a1 1 0 0 1-1.76-.951c1.575-2.915 4.618-4.906 8.13-4.906Z"
+                  fill="currentColor"></path>
+              </svg>
+            </label>
+            <div class="tab-content col-span-3 bg-base-100 border-base-300">
+              <div class="my-15 mx-11 max-sm:mx-5 max-sm:my-8 flex flex-col items-center">
+                <div>
+                  <svg aria-label="Photos of you" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="62" role="img" viewBox="0 0 96 96" width="62"><title>Photos of you</title><circle cx="48" cy="48" fill="none" r="47" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle><path d="M56.826 44.119a8.824 8.824 0 1 1-8.823-8.825 8.823 8.823 0 0 1 8.823 8.825Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path><path d="M63.69 67.999a9.038 9.038 0 0 0-9.25-8.998H41.56A9.038 9.038 0 0 0 32.31 68" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M48 20.215c-2.94 0-7.125 8.76-11.51 8.785h-4.705A8.785 8.785 0 0 0 23 37.784v22.428a8.785 8.785 0 0 0 8.785 8.785h32.43A8.785 8.785 0 0 0 73 60.212V37.784A8.785 8.785 0 0 0 64.215 29h-4.704c-4.385-.026-8.57-8.785-11.511-8.785Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"></path></svg>
+                </div>
+                <div class="my-6">
+                  <h1 class="text-[#0c1014] font-extrabold text-[30px] max-sm:text-[20px]">Photos of you</h1>
+                </div>
+                <div class="mb-6 text-center">
+                  <span class="text-[14px] max-sm:text-[10px]">When people tag you in photos, they'll appear here.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="">
+    <div class="flex flex-col gap-3 text-[14px] text-[#6a717a] items-center mt-7">
+      <nav class="mb-0.75">
+        <ul class="flex flex-wrap gap-1 justify-center">
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Meta</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">About</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Blog</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Jobs</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Help</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">API</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Privacy</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Terms</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Locations</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Instagram Lite</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Meta AI</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Threads</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Contact Uploading & Non-Users</a></li>
+          <li><a href="#" class="mx-1.25 mb-2 text-[12px] hover:underline transition-all duration-300">Meta Verified</a></li>
+        </ul>
+      </nav>
+      <span class=" text-[12px]"> © 2026 Instagram from Meta</span>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
