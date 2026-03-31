@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram</title>
+
+  <!--icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--tailwind library-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+  <!--tailwind css-->
+  <link rel="stylesheet" href="./assets/css/output.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <nav
+      class="hidden md:block fixed left-0 top-0 h-screen w-20 bg-white hover:w-60 transition-all duration-300 ease-in-out group shadow-lg z-100">
+      <div class="flex flex-col py-6 gap-1">
+        <!-- Logo -->
+        <div class="flex items-center px-4 mb-4">
+          <a href="./index.html" class="flex items-center">
+            <i class="fa-brands fa-instagram fa-xl w-8"></i>
+            <span
+              class="ml-3 font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Instagram</span>
+          </a>
+        </div>
+
+        <!-- Home -->
+        <a href="./index.html" class="navbar-a">
+          <i class="fa-regular fa-house fa-lg w-8"></i>
+          <span class="nav-span">Home</span>
+        </a>
+
+        <!-- Reels -->
+        <a href="./reels.html" class="navbar-a">
+          <i class="fa-regular fa-circle-play fa-lg w-8"></i>
+          <span class="nav-span">Reels</span>
+        </a>
+
+        <!-- Messages -->
+        <a href="./messages.html" class="navbar-a">
+          <i class="fa-regular fa-paper-plane fa-rotate-by fa-lg w-8" style="--fa-rotate-angle: 10deg"></i>
+          <span class="nav-span">Messages</span>
+        </a>
+
+        <!-- Search -->
+        <div class="drawer z-55">
+          <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Page content here -->
+            <label href="#" for="my-drawer-1" class="navbar-a">
+              <i class="fa-solid fa-magnifying-glass fa-lg w-8"></i>
+              <span class="nav-span">Search</span>
+            </label>
+          </div>
+          <div class="drawer-side">
+            <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+            <div class="menu bg-base-200 min-h-full w-[30%] p-4">
+              <!-- Sidebar content here -->
+              <div class="my-2 pt-3 pl-6 pr-3.5 pb-9"><span class="text-[24px] font-semibold">Search</span></div>
+              <div>
+                <div class="mx-4">
+                  <div class="flex justify-between items-center bg-[#e7eaee] rounded-full text-[15px]">
+                    <input type="text" placeholder="Search"
+                      class="px-4 py-2 outline-none grow border-none focus:outline-none">
+                    <img src="./assets/images/icons/false.png" class="w-8 h-8 p-2 cursor-pointer" alt="">
+                  </div>
+                </div>
+                <div class="flex flex-col">
+                  <div class="mx-6 mt-1.5 mb-2 pt-1">
+                    <h2 class="text-[16px] font-semibold">Resent</h2>
+                  </div>
+                  <div class="flex flex-col grow shrink-0 text-[14px]">
+                    <span class="text-[#6a717a] text-center">No recent searches.</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <a href="#" class="navbar-a">
+          <i class="fa-regular fa-compass fa-lg w-8"></i>
+          <span class="nav-span">Explore</span>
+        </a>
+
+        <!-- Notifications -->
+        <a href="#" class="navbar-a">
+          <i class="fa-regular fa-heart fa-lg w-8"></i>
+          <span class="nav-span">Notifications</span>
+        </a>
+
+        <!-- Create -->
+        <a href="#" class="navbar-a">
+          <i class="fa-solid fa-plus fa-lg w-8"></i>
+          <span class="nav-span">Create</span>
+        </a>
+
+        <!-- Profile -->
+        <a href="./profile.html" class="navbar-a">
+          <img src="./assets/images/public/profile.jpg" alt="" class="w-7 h-7 rounded-full" />
+          <span class="nav-span">Profile</span>
+        </a>
+
+        <!-- More -->
+        <a href="#" class="navbar-a mt-auto">
+          <i class="fa-solid fa-bars fa-lg w-8"></i>
+          <span class="nav-span">More</span>
+        </a>
+
+        <!-- Also from Meta -->
+        <a href="#" class="navbar-a">
+          <i class="fa-solid fa-cubes-stacked fa-lg w-8"></i>
+          <span class="nav-span">Also from Meta</span>
+        </a>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <main>
+    <!--direct messages-->
+    <section>
+      <div class="md:pl-24 flex h-screen overflow-hidden">
+
+        <!--friends messages-->
+        <div class="lg:w-[35%] w-[40%] max-lg:hidden border-r border-[#dbdbdb] flex flex-col h-full">
+
+          <!-- sticky header -->
+          <div class="shrink-0 bg-white z-50">
+            <div class="flex justify-between px-6 pt-9 pb-0.75">
+              <div>
+                <h2 class="text-[20px]" onclick="my_modal_11.showModal()">heba.labeeb</h2>
+                <dialog id="my_modal_11" class="modal">
+                  <div class="modal-box">
+                    <form method="dialog">
+                      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                    <h3 class="text-lg font-bold text-center">Switch accounts</h3>
+                    <div class="py-5 text-center">
+                      <div class="flex flex-col gap-3">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center gap-2">
+                            <img src="./assets/images/public/profile.jpg" class="w-10 h-10 rounded-full" alt="">
+                            <span class="font-semibold text-[14px]">heba.labeeb</span>
+                          </div>
+                          <div>
+                            <img src="./assets/images/icons/circle-check-solid.png" class="w-6 h-6 rounded-full" alt="">
+                          </div>
+                        </div>
+                        <div>
+                          <a href="#" class="text-[#3143e3] text-[14px] hover:underline">Login into an Existing
+                            Account</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </dialog>
+              </div>
+              <div>
+                <img src="./assets/images/icons/pen-to-square-regular.png" class="w-8 h-8 cursor-pointer"
+                  alt="New message">
+              </div>
+            </div>
+            <!--search-->
+            <div class="px-4">
+              <div class="px-4 py-0.75 bg-[#f3f5f7] rounded-full flex items-center">
+                <img src="./assets/images/icons/search.png" class="w-6 h-6" alt="">
+                <input type="text"
+                  class="border-none outline-none focus:outline-none bg-transparent px-4 py-2 cursor-text"
+                  placeholder="Search">
+              </div>
+            </div>
+            <div class="">
+              <div class="flex gap-3 mt-4">
+                <div class="flex flex-col items-center w-[20%] cursor-pointer">
+                  <div class="relative">
+                    <img src="./assets/images/public/profile.jpg" class="rounded-full w-full object-cover" alt="">
+                    <div
+                      class="absolute top-0 left-0 bg-white rounded-2xl shadow-sm border border-gray-200 p-1.5 text-[10px] text-gray-500 leading-tight">
+                      Your thoughts go here...
+                    </div>
+                  </div>
+                  <span class="text-[#6a717a] text-[12px] mt-0.5">Your note</span>
+                </div>
+                <div class="flex flex-col items-center w-[20%] cursor-pointer">
+                  <div class="relative">
+                    <img src="./assets/images/sugg_accounts/acc1.jpg" class="rounded-full w-full object-cover" alt="">
+                    <div
+                      class="absolute top-0 left-0 bg-white rounded-2xl shadow-sm border border-gray-200 p-1.5 text-[10px] text-gray-500 leading-tight text-center">
+                      <i class="fa-solid fa-heart" style="color: rgb(237, 51, 215);"></i>
+                    </div>
+                  </div>
+                  <span class="text-[12px] mt-0.5">𝐀𝐘𝐀𝐇 ✿</span>
+                </div>
+                <div class="flex flex-col items-center w-[20%] cursor-pointer">
+                  <div class="relative">
+                    <img src="./assets/images/public/sawsan.jpg" class="rounded-full w-full object-cover" alt="">
+                    <div
+                      class="absolute top-0 left-0 bg-white rounded-xl shadow-sm border border-gray-200 p-1.5 text-[10px] text-gray-500 leading-tight">
+                      need coffee asap
+                    </div>
+                  </div>
+                  <span class="text-[12px] mt-0.5">Sawsan</span>
+                </div>
+                <div class="flex flex-col items-center w-[20%] cursor-pointer">
+                  <div class="relative">
+                    <img src="./assets/images/sugg_accounts/acc1.jpg" class="rounded-full w-full object-cover" alt="">
+                    <div
+                      class="absolute top-0 left-0 bg-white rounded-2xl shadow-sm border border-gray-200 p-1.5 text-[10px] text-gray-500 leading-tight">
+                      just got home 🙃
+                    </div>
+                  </div>
+                  <span class="text-[12px] mt-0.5">Femke</span>
+                </div>
+                <div class="flex flex-col items-center w-[20%] cursor-pointer">
+                  <div class="relative">
+                    <img src="./assets/images/sugg_accounts/acc4.jpg" class="rounded-full w-full object-cover" alt="">
+                    <div
+                      class="absolute top-0 left-0 bg-white rounded-2xl shadow-sm border border-gray-200 p-1.5 text-[10px] text-gray-500 leading-tight">
+                      Had a long day...
+                    </div>
+                  </div>
+                  <span class="text-[12px] mt-0.5">mayar</span>
+                </div>
+                <div
+                  class="absolute rounded-full right-0 top-[60%] bg-white shadow-lg h-7 w-7 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform border border-gray-100">
+                  <i class="fa-solid fa-chevron-right fa-sm" style="color: #000000"></i>
+                </div>
+              </div>
+              <div class="px-6 mt-4 mb-2 flex justify-between">
+                <h1 class="font-semibold text-[16px]">Messages</h1>
+                <a href="#" class="text-[#2b3036cc] text-[14px] hover:underline">Requests</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- scrollable friends list -->
+          <div class="flex-1 overflow-y-auto">
+            <div class="flex flex-col">
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/public/sawsan.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">Sawsan</span>
+                    <div class="flex gap-2 text-[#6a717a] text-[12px]">
+                      <span>You: awesome💗</span>
+                      <span>56m</span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/sugg_accounts/acc1.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">𝐀𝐘𝐀𝐇 ✿</span>
+                    <div class="flex gap-2 text-[#6a717a] text-[12px]">
+                      <span>reacted 😂 to your message</span>
+                      <span>3h</span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/public/roaa.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">Ro'a</span>
+                    <div class="flex justify-between">
+                      <div class="flex gap-2 text-[12px]">
+                        <span>Liked a message</span>
+                        <span>13h</span>
+                      </div>
+                      <span><i class="fa-solid fa-circle fa-2xs" style="color: #4a5df9;"></i></span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/sugg_accounts/acc1.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">Mais</span>
+                    <div class="flex gap-2 text-[#6a717a] text-[12px]">
+                      <span>mais._hj sent an attachment.</span>
+                      <span>2d</span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/sugg_accounts/acc1.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">Amal</span>
+                    <div class="flex gap-2 text-[#6a717a] text-[12px]">
+                      <span>ان شاء الله</span>
+                      <span>2d</span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/sugg_accounts/acc6.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">Kawthar</span>
+                    <div class="flex gap-2 text-[#6a717a] text-[12px]">
+                      <span>You: Ok!</span>
+                      <span>7d</span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/sugg_accounts/acc1.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">رهف🌷</span>
+                    <div class="flex justify-between">
+                      <div class="flex gap-2 text-[12px]">
+                        <span>Liked a message</span>
+                        <span>13h</span>
+                      </div>
+                      <span><i class="fa-solid fa-circle fa-2xs" style="color: #4a5df9;"></i></span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+
+              <div class="px-6 py-2 hover:bg-[#f3f5f7] group">
+                <div class="flex gap-2.5 items-center">
+                  <div><img src="./assets/images/sugg_accounts/acc7.jpg" class="rounded-full w-14 h-14" alt=""></div>
+                  <div class="flex flex-col grow">
+                    <span class="text-[14px]">♡𝓡𝓪𝔀𝓪𝓷</span>
+                    <div class="flex gap-2 text-[#6a717a] text-[12px]">
+                      <span>Audio call ended</span>
+                      <span>1w</span>
+                    </div>
+                  </div>
+                  <!-- icon -->
+                  <i class="fa-solid fa-ellipsis opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                    style="color:#6a717aff;"></i>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+
+        <!-- small screen sidebar -->
+        <div class="w-[15%] lg:hidden border-r border-[#dbdbdb]">
+          <div class="flex flex-col items-center overflow-y-auto h-full">
+            <div class="pt-7 pb-3">
+              <div class="p-2">
+                <img src="./assets/images/icons/pen-to-square-regular.png" class="w-8 h-8 rounded-full cursor-pointer"
+                  alt="">
+              </div>
+            </div>
+            <div>
+              <div class="px-3 py-3"><img src="assets/images/public/sawsan.jpg" class="rounded-full cursor-pointer"
+                  alt=""></div>
+              <div class="px-3 py-3"><img src="assets/images/sugg_accounts/acc1.jpg" class="rounded-full cursor-pointer"
+                  alt=""></div>
+              <div class="px-3 py-3"><img src="assets/images/public/roaa.jpg" class="rounded-full cursor-pointer"
+                  alt=""></div>
+              <div class="px-3 py-3"><img src="assets/images/sugg_accounts/acc7.jpg" class="rounded-full cursor-pointer"
+                  alt=""></div>
+              <div class="px-3 py-3"><img src="assets/images/sugg_accounts/acc5.jpg" class="rounded-full cursor-pointer"
+                  alt=""></div>
+              <div class="px-3 py-3"><img src="assets/images/sugg_accounts/acc1.jpg" class="rounded-full cursor-pointer"
+                  alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <!--Chat-->
+        <div class="w-[85%] flex flex-col h-full">
+
+          <!-- chat header-->
+          <div class="shrink-0 p-4 flex justify-between items-center border-b border-[#dbdbdb]">
+            <div class="flex gap-1.5 items-center">
+              <a href="./index.html" class="hover:scale-110 transition-transform duration-300">
+                <i class="fa-solid fa-angle-left" style="color: rgb(0, 0, 0);"></i>
+              </a>
+              <a href="#">
+                <div class="flex items-center">
+                  <div class="w-12 h-12 mr-3">
+                    <img src="./assets/images/public/sawsan.jpg" class="rounded-full" alt="">
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-[16px] font-semibold">sawsan._</span>
+                    <span class="text-[14px] text-[#6a717a]">Sawsan</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="flex gap-1">
+              <div class="p-2"><img src="./assets/images/public/call.png"
+                  class="transition-transform duration-300 ease-out hover:scale-110 cursor-pointer" alt=""></div>
+              <div class="p-2"><img src="./assets/images/public/Frame.png"
+                  class="transition-transform duration-300 ease-out hover:scale-110 cursor-pointer" alt=""></div>
+              <div class="p-2"><img src="./assets/images/public/info.png"
+                  class="transition-transform duration-300 ease-out hover:scale-110 cursor-pointer" alt=""></div>
+            </div>
+          </div>
+
+          <!--chat messages -->
+          <div class="flex-1 overflow-y-auto">
+            <div class="chat chat-start">
+              <div class="chat-image avatar">
+                <div class="ml-1 w-10 rounded-full">
+                  <img alt="sawsan._" src="./assets/images/public/sawsan.jpg" />
+                </div>
+              </div>
+              <div>
+                <img src="./assets/images/public/bag.jpg" class="w-[40%] rounded-md mb-2" alt="">
+              </div>
+              <div class="chat-bubble rounded-r-full rounded-tl-full">thoughts?</div>
+            </div>
+            <div class="chat chat-end">
+              <div class="chat-bubble bg-[#4a5df9] text-white rounded-l-full rounded-tr-full">awesome💗</div>
+              <div class="chat-footer opacity-50">Seen at 12:46</div>
+            </div>
+          </div>
+
+          <!-- input bar-->
+          <div class="shrink-0 bg-white">
+            <div class="p-4">
+              <div class="px-2.75 rounded-full border border-[#dbdbdb]">
+                <div class="flex items-center gap-1">
+                  <div class="p-1 shrink-0">
+                    <img src="./assets/images/icons/emoji.png"
+                      class="hover:scale-110 duration-300 transition-transform cursor-pointer" alt="send emoji">
+                  </div>
+                  <div class="my-1 flex-1">
+                    <input type="text" placeholder="Message..."
+                      class="w-full px-2 py-1.5 border-none outline-none focus:outline-none">
+                  </div>
+                  <div class="flex items-center shrink-0">
+                    <div>
+                      <svg aria-label="Voice Clip" fill="currentColor"
+                        class="hover:scale-110 transition-transform duration-300 cursor-pointer" height="24" role="img"
+                        viewBox="0 0 24 24" width="24">
+                        <title>Voice Clip</title>
+                        <path d="M19.5 10.671v.897a7.5 7.5 0 0 1-15 0v-.897" fill="none" stroke="currentColor"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="12" x2="12"
+                          y1="19.068" y2="22"></line>
+                        <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="2" x1="8.706" x2="15.104" y1="22" y2="22"></line>
+                        <path d="M12 15.745a4 4 0 0 1-4-4V6a4 4 0 0 1 8 0v5.745a4 4 0 0 1-4 4Z" fill="none"
+                          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                      </svg>
+                    </div>
+                    <div><img src="./assets/images/icons/sendImg.png"
+                        class="hover:scale-110 transition-transform duration-300 p-2 cursor-pointer" alt=""></div>
+                    <div><img src="./assets/images/icons/heart.png"
+                        class="hover:scale-110 transition-transform duration-300 p-2 cursor-pointer" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

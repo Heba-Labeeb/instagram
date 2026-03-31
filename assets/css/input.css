@@ -28,7 +28,7 @@
     @apply flex items-center px-4 py-3 hover:bg-gray-100 rounded-lg mx-2 transition-colors;
 }
 .navbar-a-sm{
-    @apply flex items-center px-2 py-1 hover:bg-gray-100 rounded-lg mx-2 transition-colors;
+    @apply flex items-center px-1 py-0.5 hover:bg-gray-100 rounded-lg mx-2 transition-colors;
 }
 .story-span {
     @apply text-xs font-normal text-gray-800 max-w-17.5 truncate text-center mt-1 select-none;

@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--tailwind library-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <!--tailwind css-->
+    <link rel="stylesheet" href="./assets/css/output.css" />
+
+</head>
+
+<body>
+    <header>
+        <nav
+            class="hidden md:block fixed left-0 top-0 h-screen w-20 bg-white hover:w-60 transition-all duration-300 ease-in-out group shadow-lg z-100">
+            <div class="flex flex-col py-6 gap-1">
+                <!-- Logo -->
+                <div class="flex items-center px-4 mb-4">
+                    <a href="./index.html" class="flex items-center">
+                        <i class="fa-brands fa-instagram fa-xl w-8"></i>
+                        <span
+                            class="ml-3 font-semibold text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Instagram</span>
+                    </a>
+                </div>
+
+                <!-- Home -->
+                <a href="./index.html" class="navbar-a">
+                    <i class="fa-regular fa-house fa-lg w-8"></i>
+                    <span class="nav-span">Home</span>
+                </a>
+
+                <!-- Reels -->
+                <a href="./reels.html" class="navbar-a">
+                    <i class="fa-regular fa-circle-play fa-lg w-8"></i>
+                    <span class="nav-span">Reels</span>
+                </a>
+
+                <!-- Messages -->
+                <a href="./messages.html" class="navbar-a">
+                    <i class="fa-regular fa-paper-plane fa-rotate-by fa-lg w-8" style="--fa-rotate-angle: 10deg"></i>
+                    <span class="nav-span">Messages</span>
+                </a>
+
+                <!-- Search -->
+                <div class="drawer z-55">
+                    <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+                    <div class="drawer-content">
+                        <!-- Page content here -->
+                        <label href="#" for="my-drawer-1" class="navbar-a">
+                            <i class="fa-solid fa-magnifying-glass fa-lg w-8"></i>
+                            <span class="nav-span">Search</span>
+                        </label>
+                    </div>
+                    <div class="drawer-side">
+                        <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+                        <div class="menu bg-base-200 min-h-full w-[30%] p-4">
+                            <!-- Sidebar content here -->
+                            <div class="my-2 pt-3 pl-6 pr-3.5 pb-9"><span
+                                    class="text-[24px] font-semibold">Search</span></div>
+                            <div>
+                                <div class="mx-4">
+                                    <div
+                                        class="flex justify-between items-center bg-[#e7eaee] rounded-full text-[15px]">
+                                        <input type="text" placeholder="Search"
+                                            class="px-4 py-2 outline-none grow border-none focus:outline-none">
+                                        <img src="./assets/images/icons/false.png" class="w-8 h-8 p-2 cursor-pointer"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <div class="mx-6 mt-1.5 mb-2 pt-1">
+                                        <h2 class="text-[16px] font-semibold">Resent</h2>
+                                    </div>
+                                    <div class="flex flex-col grow shrink-0 text-[14px]">
+                                        <span class="text-[#6a717a] text-center">No recent searches.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explore -->
+                <a href="#" class="navbar-a">
+                    <i class="fa-regular fa-compass fa-lg w-8"></i>
+                    <span class="nav-span">Explore</span>
+                </a>
+
+                <!-- Notifications -->
+                <a href="#" class="navbar-a">
+                    <i class="fa-regular fa-heart fa-lg w-8"></i>
+                    <span class="nav-span">Notifications</span>
+                </a>
+
+                <!-- Create -->
+                <a href="#" class="navbar-a">
+                    <i class="fa-solid fa-plus fa-lg w-8"></i>
+                    <span class="nav-span">Create</span>
+                </a>
+
+                <!-- Profile -->
+                <a href="./profile.html" class="navbar-a">
+                    <img src="./assets/images/public/profile.jpg" alt="" class="w-7 h-7 rounded-full" />
+                    <span class="nav-span">Profile</span>
+                </a>
+
+                <!-- More -->
+                <a href="#" class="navbar-a mt-auto">
+                    <i class="fa-solid fa-bars fa-lg w-8"></i>
+                    <span class="nav-span">More</span>
+                </a>
+
+                <!-- Also from Meta -->
+                <a href="#" class="navbar-a">
+                    <i class="fa-solid fa-cubes-stacked fa-lg w-8"></i>
+                    <span class="nav-span">Also from Meta</span>
+                </a>
+            </div>
+        </nav>
+
+
+        <nav class="block md:hidden fixed bottom-0 left-0 w-screen border border-gray-200 px-3 py-2 bg-white z-100">
+            <div class="flex justify-evenly px-1">
+                <!-- Home -->
+                <a href="#" class="navbar-a-sm">
+                    <i class="fa-regular fa-house fa-lg"></i>
+                </a>
+
+                <!-- Explore -->
+                <a href="#" class="navbar-a-sm">
+                    <i class="fa-regular fa-compass fa-lg"></i>
+                </a>
+
+                <!-- Reels -->
+                <a href="./reels.html" class="navbar-a-sm">
+                    <i class="fa-regular fa-circle-play fa-lg"></i>
+                </a>
+
+                <!-- Create -->
+                <a href="#" class="navbar-a-sm">
+                    <i class="fa-solid fa-plus fa-lg"></i>
+                </a>
+
+                <!-- Messages -->
+                <a href="./messages.html" class="navbar-a-sm">
+                    <i class="fa-regular fa-paper-plane fa-rotate-by fa-lg" style="--fa-rotate-angle: 10deg"></i>
+                </a>
+
+                <!-- Profile -->
+                <a href="./profile.html" class="navbar-a-sm">
+                    <img src="./assets/images/public/profile.jpg" alt="" class="w-6 h-6 rounded-full" />
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+
+            <!-- Reel 1-->
+            <div class="snap-start snap-always flex items-center justify-center min-h-screen py-4 ">
+
+
+                <div class="flex items-end gap-3">
+
+                    <!-- video -->
+                    <div class="relative w-75 h-137.5 rounded-xl overflow-hidden shadow-2xl">
+
+                        <video src="./assets/videos/reels_cart.mp4" class="w-full h-full object-cover" autoplay loop
+                            muted onclick="
+        if(this.paused) { 
+        this.play(); 
+        this.muted = false;
+        // mute all other reels // with ai help // 
+        document.querySelectorAll('video').forEach(v => {
+            if(v !== this) v.muted = true;
+        });
+    } else { 
+        this.pause(); 
+        this.muted = true; 
+    }
+">
+                        </video>
+
+                        <!-- Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-3.5"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);">
+
+                            <!-- acc info-->
+                            <div class="flex items-center gap-2 mb-2">
+                                <img src="./assets/images/posts/cartier.jpg"
+                                    class="rounded-full w-8 h-8 cursor-pointer shrink-0 object-cover" alt="">
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1.25">
+                                        <span class="text-white text-[13px] font-semibold">cartier</span>
+                                        <svg aria-label="Verified" class="x1lliihq x1n2onr6" fill="rgb(0, 149, 246)"
+                                            height="12" role="img" viewBox="0 0 40 40" width="12">
+                                            <title>Verified</title>
+                                            <path
+                                                d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"
+                                                fill-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-white/80 text-[11px]">
+
+                                    </div>
+                                </div>
+                                <button
+                                    class="border border-white text-white rounded-lg px-3 py-1 text-[12px] font-medium ml-1 hover:bg-white hover:text-black transition">
+                                    Follow
+                                </button>
+                            </div>
+
+                            <!-- caption -->
+                            <div class="text-white text-[12px] leading-relaxed opacity-90">
+                                <input type="checkbox" id="toggle-cartier" class="peer hidden">
+                                <span class="line-clamp-1 peer-checked:line-clamp-none">
+                                    The elegant movement of the Panther inspires the Panthère C de Cartier bag, down to
+                                    the slight feline undulation that runs through the precious clasp.
+                                    #PanthèredeCartier
+                                </span>
+                                <!--more-->
+                                <label for="toggle-cartier"
+                                    class="text-gray-400 font-semibold cursor-pointer peer-checked:hidden">
+                                    more
+                                </label>
+                                <!--less-->
+                                <label for="toggle-cartier"
+                                    class="text-gray-400 font-semibold cursor-pointer hidden peer-checked:inline">
+                                    less
+                                </label>
+                            </div>
+
+                            <!-- sound -->
+                            <div class="flex items-center gap-2 mt-2">
+                                <i class="fa-solid fa-music fa-xs text-white"></i>
+                                <span class="text-white text-[11px]">Original Audio · cartier</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- react icon-->
+                    <div class="flex flex-col items-center pb-4">
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/heart.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">70.5K</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/comment.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">639</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/paper-plane-regular.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/saveReel.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <!-- sound img-->
+                        <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                            <img src="./assets/images/posts/cartier.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2-->
+            <div class="snap-start snap-always flex items-center justify-center min-h-screen py-4">
+
+
+                <div class="flex items-end gap-3">
+
+                    <!-- video -->
+                    <div class="relative w-75 h-137.5 rounded-xl overflow-hidden shadow-2xl">
+
+                        <video src="./assets/videos/reels_knowledge.mp4" class="w-full h-full object-cover" autoplay
+                            loop muted onclick="
+        if(this.paused) { 
+        this.play(); 
+        this.muted = false;
+        // mute all other reels // with ai help // 
+        document.querySelectorAll('video').forEach(v => {
+            if(v !== this) v.muted = true;
+        });
+    } else { 
+        this.pause(); 
+        this.muted = true; 
+    }
+">
+                        </video>
+
+                        <!-- Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-3.5"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);">
+
+                            <!-- acc info-->
+                            <div class="flex items-center gap-2 mb-2">
+                                <img src="./assets/images/stories/knowledgeAcademy.jpg"
+                                    class="rounded-full w-8 h-8 cursor-pointer shrink-0 object-cover" alt="">
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1.25">
+                                        <span class="text-white text-[13px] font-semibold">eknowledge.learn</span>
+                                    </div>
+                                </div>
+                                <button
+                                    class=" text-white rounded-lg px-3 py-1 text-[12px] font-medium ml-1 hover:bg-white hover:text-black transition">
+                                    Follow
+                                </button>
+                            </div>
+
+                            <!-- caption -->
+                            <div class="text-white text-[12px] leading-relaxed opacity-90">
+                                <input type="checkbox" id="toggle-knowledge" class="peer hidden">
+                                <span class="line-clamp-1 peer-checked:line-clamp-none">
+                                    جاهزين للتحدي؟ 😎
+                                    التسجيل لتصفيات المشاركة في IEEEXtreme 19 بيفتح بكرا الجمعة 👀
+                                    📍 التصفيات رح تكون يوم الأحد ١٠/١٢ وجاهية في الجامعة، وعدد المقاعد محدود جداً!
+
+                                    حضّروا حالكم لتنافسوا وتثبتوا مهاراتكم 👨🏻‍💻🔥
+                                    فرصتكم بتبدأ من هون لتكونوا جزء من التحدي البرمجي الأقوى بالعالم! 💪🏻
+                                    التفاصيل ورابط التسجيل رح ننشرهم بكرا، خليكم متابعين! ⚡
+                                </span>
+                                <!--more-->
+                                <label for="toggle-knowledge"
+                                    class="text-gray-400 font-semibold cursor-pointer peer-checked:hidden">
+                                    more
+                                </label>
+                                <!--less-->
+                                <label for="toggle-knowledge"
+                                    class="text-gray-400 font-semibold cursor-pointer hidden peer-checked:inline">
+                                    less
+                                </label>
+                            </div>
+
+                            <!-- sound -->
+                            <div class="flex items-center gap-2 mt-2">
+                                <i class="fa-solid fa-music fa-xs text-white"></i>
+                                <span class="text-white text-[11px]">Original Audio · eknowledge.learn</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- react icon-->
+                    <div class="flex flex-col items-center pb-4">
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/heart.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">109</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/comment.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">31</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/paper-plane-regular.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/saveReel.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <!-- sound img-->
+                        <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                            <img src="./assets/images/stories/knowledgeAcademy.jpg" class="w-full h-full object-cover"
+                                alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 3-->
+            <div class="snap-start snap-always flex items-center justify-center min-h-screen py-4">
+
+
+                <div class="flex items-end gap-3">
+
+                    <!-- video -->
+                    <div class="relative w-75 h-137.5 rounded-xl overflow-hidden shadow-2xl">
+
+                        <video src="./assets/videos/post_bugatti.mp4" class="w-full h-full object-cover" autoplay loop
+                            muted onclick="
+        if(this.paused) { 
+        this.play(); 
+        this.muted = false;
+        // mute all other reels // with ai help // 
+        document.querySelectorAll('video').forEach(v => {
+            if(v !== this) v.muted = true;
+        });
+    } else { 
+        this.pause(); 
+        this.muted = true; 
+    }
+">
+                        </video>
+
+                        <!-- Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-3.5"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);">
+
+                            <!-- acc info-->
+                            <div class="flex items-center gap-2 mb-2">
+                                <img src="./assets/images/stories/bugatti.jpg"
+                                    class="rounded-full w-8 h-8 cursor-pointer shrink-0 object-cover" alt="">
+                                <div class="flex flex-col">
+                                    <div class="flex items-center gap-1.25">
+                                        <span class="text-white text-[13px] font-semibold">bugatti</span>
+                                        <svg aria-label="Verified" class="x1lliihq x1n2onr6" fill="rgb(0, 149, 246)"
+                                            height="12" role="img" viewBox="0 0 40 40" width="12">
+                                            <title>Verified</title>
+                                            <path
+                                                d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"
+                                                fill-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex items-center gap-1 text-white/80 text-[11px]">
+
+                                    </div>
+                                </div>
+                                <button
+                                    class="border border-white text-white rounded-lg px-3 py-1 text-[12px] font-medium ml-1 hover:bg-white hover:text-black transition">
+                                    Follow
+                                </button>
+                            </div>
+
+                            <!-- caption -->
+                            <div class="text-white text-[12px] leading-relaxed opacity-90">
+                                <input type="checkbox" id="toggle-bugatti" class="peer hidden">
+                                <span class="line-clamp-1 peer-checked:line-clamp-none">
+                                    No two BUGATTIs are ever alike.
+                                    With the MISTRAL, performance meets personal vision at the highest level. Every
+                                    surface, material and detail is shaped around its owner, creating a piece of art
+                                    that exists nowhere else on earth.
+                                    #BUGATTI
+                                    #MISTRAL
+                                    @bugattitoronto
+                                    WLTP: bugatti.link/consumption
+                                </span>
+                                <!--more-->
+                                <label for="toggle-bugatti"
+                                    class="text-gray-400 font-semibold cursor-pointer peer-checked:hidden">
+                                    more
+                                </label>
+                                <!--less-->
+                                <label for="toggle-bugatti"
+                                    class="text-gray-400 font-semibold cursor-pointer hidden peer-checked:inline">
+                                    less
+                                </label>
+                            </div>
+
+                            <!-- sound -->
+                            <div class="flex items-center gap-2 mt-2">
+                                <i class="fa-solid fa-music fa-xs text-white"></i>
+                                <span class="text-white text-[11px]">Original Audio · bugatti</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- react icon-->
+                    <div class="flex flex-col items-center pb-4">
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/heart.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">70.5K</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/comment.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">639</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/paper-plane-regular.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/saveReel.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <!-- sound img-->
+                        <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                            <img src="./assets/images/stories/bugatti.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 4-->
+            <div class="snap-start snap-always flex items-center justify-center min-h-screen py-4">
+
+
+                <div class="flex items-end gap-3">
+
+                    <!-- video -->
+                    <div class="relative w-75 h-137.5 rounded-xl overflow-hidden shadow-2xl">
+
+                        <video src="./assets/videos/reels_3.mp4" class="w-full h-full object-cover" autoplay loop muted
+                            onclick="
+    if(this.paused) { 
+        this.play(); 
+        this.muted = false;
+        
+        document.querySelectorAll('video').forEach(v => {
+            if(v !== this) v.muted = true;
+        });
+    } else { 
+        this.pause(); 
+        this.muted = true; 
+    }
+">
+                        </video>
+
+                        <!-- Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 p-3.5"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);">
+
+                            <!-- acc info-->
+                            <div class="flex items-center gap-2 mb-2">
+                                <img src="./assets/images/sugg_accounts/acc1.jpg"
+                                    class="rounded-full w-8 h-8 border border-white cursor-pointer shrink-0 object-cover"
+                                    alt="">
+                                <div class="flex flex-col">
+                                    <span class="text-white text-[13px] font-semibold">isthat_harshzz</span>
+                                    <div class="flex items-center gap-1 text-white/80 text-[11px]">
+                                        <i class="fa-solid fa-user fa-2xs"></i>
+                                        <span>techtuberzz</span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="border border-white text-white rounded-lg px-3 py-1 text-[12px] font-medium ml-1 hover:bg-white hover:text-black transition">
+                                    Follow
+                                </button>
+                            </div>
+
+                            <!-- caption -->
+                            <p class="text-white text-[12px] leading-relaxed opacity-90">
+                                AAAaaaHHHHhhhhh
+                            </p>
+
+                            <!-- sound -->
+                            <div class="flex items-center gap-2 mt-2">
+                                <i class="fa-solid fa-music fa-xs text-white"></i>
+                                <span class="text-white text-[11px]">Original Audio · isthat_harshzz</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- react icon-->
+                    <div class="flex flex-col items-center pb-4">
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/heart.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">60.3K</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-5">
+                            <img src="./assets/images/icons/comment.svg"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                            <span class="text-xs font-medium">129</span>
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/paper-plane-regular.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <div class="flex flex-col items-center gap-1 mb-7">
+                            <img src="./assets/images/icons/saveReel.png"
+                                class="w-8 h-8 object-contain cursor-pointer hover:scale-110 duration-300 transition-transform">
+                        </div>
+
+                        <!-- sound-->
+                        <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                            <img src="./assets/images/sugg_accounts/acc1.jpg" class="w-full h-full object-cover" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        </section>
+    </main>
+
+    
+</body>
+
+</html>
